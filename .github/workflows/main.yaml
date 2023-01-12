@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: npm i 
       - name: Install CDK
-        run: npm i -g aws-cdk
+        run: npm i aws-cdk
       - name: Build 
         run: npm run build 
       - name: Deploy 
