@@ -7,7 +7,7 @@ on:
     
 jobs:
   aws_cdk:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: "14"
       - name: Configure aws credentials
-        uses: aws-actions/configure-aws-credentials@master
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
@@ -23,4 +23,4 @@ jobs:
       - name: Install dependencies
         run: npm i 
       - name: Deploy
-        run: npm start
+        run: npm deploy
