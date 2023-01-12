@@ -22,6 +22,8 @@ jobs:
           aws-region: "ap-south-1"
       - name: Install dependencies
         run: npm i 
+      - name: Install CDK
+        run: npm i -g aws-cdk
       - name: Build 
         run: npm run build 
       - name: Deploy 
