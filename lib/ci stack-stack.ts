@@ -7,10 +7,10 @@ export class CiStackStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
 
     // example resource
     const queue = new sqs.Queue(this, 'CiStackQueue', {
+      queueName: "CI-Queue",
       visibilityTimeout: cdk.Duration.seconds(300)
     });
   }
