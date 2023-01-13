@@ -35,5 +35,5 @@ jobs:
       run: npm run build
 
     - name: Deploy the CDK app
-      run: npx cdk deploy
+      run: cdk deploy
 
